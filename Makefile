@@ -1,4 +1,4 @@
-VERSION=1.1
+VERSION=
 LATEXTARGET=thesis$(VERSION)
 #
 # LaTeX Makefile
@@ -215,7 +215,7 @@ latex:
 # Below invoke LATEX on target file once more, it will input *.gls file and
 # process it accordingly -- Quan Zou
 # here is explicit rule which might be different from implicit rule
-	@$(MAKEINDEX) *.nol -s nomencl.ist -o *.nls;\
+	@$(MAKEINDEX) *.nlo -s nomencl.ist -o *.nls;\
 	$(LATEX) `basename \`ls *.tex\` .tex`.tex
 
 latexfigures:

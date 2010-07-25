@@ -1,0 +1,90 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                     MSthesis v1.1                                       %
+%                            By Quan Zou <quan.zou@gmail.com>                             %
+%                            Version 1.1 released 01/10/2010                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%------------------------------------------------------------------------------------------
+% pdfps difference is maintained in case different command used for latexpdf
+%------------------------------------------------------------------------------------------
+\newcommand{\PdfPsText}[2]{
+  \ifpdf
+     #1
+  \else
+     #2
+  \fi
+}
+
+%------------------------------------------------------------------------------------------
+% include graphics
+%------------------------------------------------------------------------------------------
+\newcommand{\IncludeGraphicsH}[3]{
+  \PdfPsText{\includegraphics[height=#2]{#1}}{\includegraphics[bb=#3, height=#2]{#1}}
+  %\PdfPsText{\includegraphics[height=#2]{#1}}{\includegraphics[height=#2]{#1}}
+}
+
+\newcommand{\IncludeGraphicsW}[3]{
+  \PdfPsText{\includegraphics[width=#2]{#1}}{\includegraphics[bb=#3, width=#2]{#1}}
+  %\PdfPsText{\includegraphics[width=#2]{#1}}{\includegraphics[width=#2]{#1}}
+}
+
+%------------------------------------------------------------------------------------------
+% environments settings
+% \label need to follow \caption, \ref is fragile
+%------------------------------------------------------------------------------------------
+% figure environment
+\newcommand{\InsertFig}[4]{
+  \begin{figure}[!htbp]
+    \begin{center}
+      \leavevmode
+      {#1}
+    \end{center}
+    \noindent{\caption{#2}\label{#3}#4}
+  \end{figure}
+}
+
+% table environment
+\newcommand{\InsertTab}[4]{
+  \begin{table}[!htbp]
+    \begin{center}
+      \leavevmode
+      {#1}
+    \end{center}
+    \noindent{\caption{#2}\label{#3}#4}
+  \end{table}
+}
+
+%------------------------------------------------------------------------------------------
+% The CJK* environment will swallow unprotected spaces and newlines after a CJK character 
+% (the usual habit for Chinese and Japanese text), whereas CJK will not (for European and 
+% Korean text). You can change between these two `modes' with \CJKspace (CJK* -> CJK) and 
+% \CJKnospace (CJK -> CJK*).
+%------------------------------------------------------------------------------------------
+\newcommand{\hanzi}[3]{
+  \CJKfamily{#2}
+  \begin{CJK}{#1}{#2}
+   {#3}
+  \end{CJK}
+}
+
+%------------------------------------------------------------------------------------------
+% references
+%------------------------------------------------------------------------------------------
+\newcommand{\cref}[1]{Chap.~\ref{#1}}
+\newcommand{\apdref}[1]{Appdx.~\ref{#1}}
+\newcommand{\eref}[1]{Eqn.~\ref{#1}}
+\newcommand{\fref}[1]{Fig.~\ref{#1}}
+%\renewcommand{\fref}[1]{Fig.~\arabic{chapter}.\ref{#1}}
+\newcommand{\tref}[1]{Tab.~\ref{#1}}
+\newcommand{\rref}[1]{\arabic{chapter}.\ref{#1}}
+\newcommand{\foutref}[2]{Fig.~\ref{#1}.\ref{#2}}
+\newcommand{\bfref}[1]{\noindent {\bf Figure~\ref{#1}}}
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\newfig}[1]{\refstepcounter{fig}\label{#1}Fig.~\ref{#1}}
+\renewcommand{\newfig}[1]{\refstepcounter{fig}\label{#1}Fig.~\arabic{chapter}.\ref{#1}}
+\newcommand{\newfigure}[1]{\refstepcounter{fig}\label{#1}Figure~\ref{#1}}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../thesis"
+%%% End: 

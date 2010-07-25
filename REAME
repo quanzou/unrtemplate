@@ -25,9 +25,32 @@ please send all bugs, questions, comments and suggestions, etc., to
 the author at quan.zou@gmail.com
 
 Requirement of the program:
-Unix command shell, GNU make utility, TeX Live(http://tug.org). 
+Unix command shell, GNU make utility, TeX Live(http://tug.org), 
 
-Usage:
+Usage of the package:
 1. Edit the executables used by the program at the beginning of the 
 Makefile to point to its corresponding location in your system. 
 
+2. Edit Cover/cover.tex file to adapt your own needs. 
+
+3. This step is optional. If you want to track different version of 
+your thesis, you can do the following:
+
+First, set the version in Makefile:
+# VERSION=01Jan
+
+Then, set environment varialbe $LATEXTARGET (take Bash for example):
+# export LATEXTARGET=thesis01Jan
+# echo $LATEXTARGET
+
+Finally, change the thesis.tex into corresponding filename:
+# mv thesis.tex thesis01Jan.tex
+
+4. Compile your very first thesis by issuing the following command:
+
+# make latex
+# make view			// compile dvi file and view it
+# make latexps			// compile ps file
+# make latexpdf			// compile pdf file
+
+# make latexhelp		// show latex options
