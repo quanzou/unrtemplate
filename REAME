@@ -24,3 +24,10 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 please send all bugs, questions, comments and suggestions, etc., to 
 the author at quan.zou@gmail.com
 
+Requirement of the program:
+Unix command shell, GNU make utility, TeX Live(http://tug.org). 
+
+Usage:
+1. Edit the executables used by the program at the beginning of the 
+Makefile to point to its corresponding location in your system. 
+
