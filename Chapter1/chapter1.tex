@@ -1,0 +1,129 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                     MSthesis v1.1                                       %
+%                            By Quan Zou <quan.zou@gmail.com>                             %
+%                            Version 1.1 released 01/10/2010                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%------------------------------------------------------------------------------------------
+% thesis chapter
+%------------------------------------------------------------------------------------------
+
+\chapter{Introduction}\label{chap1}
+\ifpdf
+    \graphicspath{{Chapter1/Chapter1Figs/PNG/}{Chapter1/Chapter1Figs/PDF/}{Chapter1/Chapter1Figs/}}
+\else
+    \graphicspath{{Chapter1/Chapter1Figs/EPS/}{Chapter1/Chapter1Figs/}}
+\fi
+
+\section{Background of synapse transmission}
+
+% (chemical) synaptic transmission in the brain
+The synapse is the functional communication unit between one neuron
+and another.  It is the target at which information transfer happens.
+\fref{Syn_Intro} schematizes a synapse illustrating the pre-synaptic
+bouton at the end of the axon, and a spine on the dendrite. The
+terminology of pre-synaptic and post-synaptic defines the direction
+of signal flow. Following an electrical signal neurotransmitter is
+secreted from the pre-synaptic nerve terminal of a chemical synapse. 
+The neurotransmitter binds to post-synaptic receptors to mediate flux
+of ions across the membrane, driving the membrane potential away from
+resting voltage and causing a so called post-synaptic potential (PSP).
+Synaptic potential may trigger an action potential in the cell body,
+which runs down the axon to be conveyed from the nerve terminal onto
+the next neuron~\cite{Ral98}.  The two neuron are not directly
+connected but communicate via the release of transmitters in the
+synaptic cleft.\\
+
+% electrical synapse
+Most synapses are chemical: neurotransmitters are released from one
+neuron and bind to specific receptors on another neuron, generating
+an electrical signal in the latter neuron. In addition to chemical
+synapses, there are electrical synapses with specialized channels
+(gap junctions) that allow current to flow directly from one neuron
+to another.  \\
+
+% postsynaptic potentials
+The number of synaptic connections a neuron forms can be
+extraordinarily large and many afferents can interact and influence a
+post-synaptic neuron, by either excitatory or inhibitory effects,
+depending on the ions that permeate the channels on the postsynaptic
+side operated by the receptor. These can be {\epsp}s (EPSPs) or
+{\ipsp}s (IPSPs). These potentials can vary in size. An IPSP pushes
+the membrane potential down to more negative values and away from its
+firing potential. An EPSP moves the potential in a positive direction,
+toward firing threshold. Finally, if a large EPSP reaches the firing
+threshold, the neuron fires a spike (action potential, AP). This
+spike can be considered as all-or-none, because it is of stereotyped
+shape and amplitude, and is not graded. The action potential is the
+signal that can be sent down the axon to create a PSP in another
+neuron~\cite{Lyn02}.\\
+
+\nomenclature[zipsp]{$IPSP$}{\ipsp}				% first letter z is for Acronyms
+\nomenclature[zepsp]{$EPSP$}{\epsp}				% first letter z is for Acronyms
+
+% Biophysics of glutamatergic synapse
+Most excitatory contacts between neurons in cerebral cortex release
+glutamate as their transmitter. In most parts of this thesis, we
+consider the generic form of glutamatergic synapse
+(\fref{Syn_Intro}), which is found throughout the cortex as well as
+in many other regions of the central nervous system.  Upon arrival of
+a post-synaptic AP, {\ca} enters the post-synaptic terminal through
+specialized voltage-gated calcium channels. The local intense rise of
+{\ca} concentration triggers the fusion of docked vesicles with the
+cell membrane and the release of their contents in the synaptic 
+cleft~\cite{Edw95}.  The fusion of one vesicle releases about 
+1000 to 4000 transmitter molecules in less than a millisecond, 
+which activate glutamatergic postsynaptic receptors that mediate 
+{\epsp} (EPSC) recorded on the postsynaptic side~\cite{Clm96,
+Edw95}. After release transmitter molecules are rapidly removed 
+from the cleft either by diffusion or binding to glutamate
+transporters~\cite{Dim97, Rsk98}. \\
+
+%\InsertFig{\IncludeGraphicsW{fig_name}{4in}}
+%{Title}{Label}
+%{Captions}
+
+\InsertFig{\IncludeGraphicsW{syn_intro}{5.5in}{88 350 532 775}}
+{Basic synapse design}{Syn_Intro}
+{Electrical signals in the pre-synaptic neuron cause the vesicles 
+(big dots) to release neurotransmitters (little dots) into the 
+synaptic cleft. They diffuse across the cleft and bind the surface 
+receptors, which then triggers an influx of ions into the 
+post-synaptic neuron causing the synaptic potential. (modified from 
+Lytton, 2002~\cite{Lyn02}.)}
+
+% 2 type of Glu-receptors
+The release of glutamate activates two different types of
+ligand-gated ion channels, AMPA (\ampa)/kainate receptors and NMDA
+(\nmda) receptors.  AMPA receptors activate quickly in less than a
+millisecond and mediate the major contribution of glutamate activated
+excitatory transmission.  The activation of NMDA receptors occurs on
+a much slower time-scale of tens of milliseconds.  Around resting
+potential ($\sim -$70~mV), NMDA receptors are nonconducting due to a
+voltage dependent magnesium block but only activate both glutamate
+release is combined with postsynaptic depolarization~\cite{Kzm97}.
+The number of AMPA receptors within a glutamatergic synapse has been
+estimated as 30 to 100 receptors, whereas there are only few, i.e. 
+less than ten NMDA receptors~\cite{Edw95, Spt95}. The latter hardly
+contribute to fast excitatory transmission and phenomena of
+short-term plasticity, but may be important for development and
+long-term changes in synaptic efficacy~\cite{Kzm97, Mar98}.  Although
+a variety of electrophysiological and anatomical studies have been
+performed on glutamatergic synapses~(reviewed in~\cite{Edw95a,
+Wls98}), essential steps of the transmission process are not
+understood in detail. \\
+
+\nomenclature[gdelta]{$\delta(t)$}{synaptic pulse or neuronal spike}			% first letter g is for Greek
+
+%------------------------------------------------------------------------------------------
+
+%\InsertFig{\IncludeGraphicsW{fig_name}{4in}}
+%{Title}{Label}
+%{Captions
+%}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../thesis"
+%%% End: 

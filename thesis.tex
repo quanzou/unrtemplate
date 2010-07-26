@@ -8,6 +8,7 @@
 % input macros (i.e. write your own macros files under Macros/)
 %------------------------------------------------------------------------------------------
 \include{Macros/macros}
+\include{Macros/abbrevs}
 
 %------------------------------------------------------------------------------------------
 % document class (twoside: double sided; oneside: single sided)
@@ -47,6 +48,20 @@
 \listoffigures
 \printnomenclature
 \addcontentsline{toc}{chapter}{Nomenclature}
+
+%------------------------------------------------------------------------------------------
+% define thesis chapters
+%------------------------------------------------------------------------------------------
+\mainmatter
+\include{Chapter1/chapter1}
+
+%------------------------------------------------------------------------------------------
+% define thesis bibliography
+%------------------------------------------------------------------------------------------
+\bibliographystyle{plain}		% bibliography style
+\renewcommand{\bibname}{References}	% changes default name Bibliography to References
+\bibliography{References/references}
+\addcontentsline{toc}{chapter}{References} %adds References to contents page
 
 \end{document}
 
