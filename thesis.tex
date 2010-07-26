@@ -26,10 +26,27 @@
 \makecover
 \maketitle
 
+% spacing in a document
+\doublespace
+
 %------------------------------------------------------------------------------------------
-% define thesis abastract
+% set the number of sectioning levels that get number and appear in the contents
 %------------------------------------------------------------------------------------------
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+%------------------------------------------------------------------------------------------
+% define thesis abastract, dedication and acknowledgement
+%------------------------------------------------------------------------------------------
+\frontmatter
 \include{Abstract/abstract}
+\include{Dedication/dedication}
+\include{Acknowledgement/acknowledgement}
+
+\tableofcontents
+\listoffigures
+\printnomenclature
+\addcontentsline{toc}{chapter}{Nomenclature}
 
 \end{document}
 
