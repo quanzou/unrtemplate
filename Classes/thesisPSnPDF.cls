@@ -554,7 +554,7 @@
 \newenvironment{abstracts} {\begin{alwayssingle} \pagestyle{empty}
   \begin{center}
   \vspace*{1.5cm}
-  {\Large \bfseries  Abstract}
+  {\Large \bfseries Abstract}
   \end{center}
   \vspace{0.5cm}
    \begin{quote}}
@@ -567,7 +567,7 @@
 \newenvironment{abstractslong} {\begin{alwayssingle} \pagestyle{empty}
   \begin{center}
   \vspace*{1.5cm}
-  {\Large \bfseries  Abstract}
+  {\Large \bfseries Abstract}
   \end{center}
   \vspace{0.5cm}
   }
@@ -577,18 +577,33 @@
 % on including title and author etc as required to be handed in separately
 
 \newenvironment{abstractseparate} {\begin{alwayssingle} \pagestyle{empty}
-  \vspace*{-1in}
- \begin{center}
-    { \Large {\bfseries {\@title}} \par}
-    {{\large \vspace*{1ex} \@author} \par}
-{\large \vspace*{1ex}
-    {{\@collegeordept} \par}
-    {{\@university} \par}
-\vspace*{1ex}
-    {{\it \submittedtext} \par}
-    {\it {\@degree} \par}
-\vspace*{2ex}
-    {\@submitdate}}
+    \begin{center}
+    \vspace*{0cm}
+    \Tspace{
+        \Large
+        \bfseries
+        \@title
+        }{1ex}
+    \Tspace{
+        \large
+        \@author
+        }{1ex}
+
+    \Tspace{
+        \large 
+        \@collegeordept \\
+        \@university
+        }{1ex}
+
+    \Tspace{
+        \it 
+        be accepted in partial fulfillment of the \\ 
+        requirements for the degree of\\
+        \@degree
+        }{2ex}
+
+    \@submitdate
+
   \end{center}}
 {\end{alwayssingle}}
 
