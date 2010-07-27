@@ -1,0 +1,114 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                     MSthesis v1.1                                       %
+%                            By Quan Zou <quan.zou@gmail.com>                             %
+%                            Version 1.1 released 01/10/2010                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%------------------------------------------------------------------------------------------
+% thesis appendix
+%------------------------------------------------------------------------------------------
+\chapter{} \label{Appdx}
+
+\ifpdf
+    \graphicspath{{Appendix/AppendixFigs/PNG/}{Appendix/AppendixFigs/PDF/}{Appendix/AppendixFigs/}}
+\else
+    \graphicspath{{Appendix/AppendixFigs/EPS/}{Appendix/AppendixFigs/}}
+\fi
+
+\section{Example of an equation} \label{Appdx1}
+
+The model equations implemented in both numeric simulation and analog circuits were as follows:
+
+\bea
+\label{AppdxB_1}
+C_{MEM}\frac{dV_{MEM}}{dt} &\ =\ & -\sum( I_{Ion} ) + \sum(I_{Ext})	~ ,
+\eea
+
+where $I_{\mathrm {Ion}}$ are the ionic currents, $I_{\mathrm {Ext}}$ the synaptic and stimulation currents. 
+These currents were described by:
+
+\bea
+\label{AppdxB_2}
+I_{Ion} &\ =\ & {\bar g}_{Ion} m^ph^q(V_{MEM}-V_{EQ}) ~ , \\
+{\tau}_{m}(V_{MEM})\frac{dm}{dt} = m_{\infty}(V_{MEM}) - m ~ , &&
+m_{\infty}(V_{MEM}) =
+\frac{1}{1+exp\Big(-\frac{V_{MEM}-V_{OFFSETm}}{V_{SLOPEm}}\Big)} ~ , \nonumber \\
+{\tau}_{h}(V_{MEM})\frac{dh}{dt} = h_{\infty}(V_{MEM}) - h ~ , &&
+h_{\infty}(V_{MEM}) =
+\frac{1}{1+exp\Big(-\frac{V_{MEM}-V_{OFFSETh}}{V_{SLOPEh}}\Big)} ~,
+\nonumber
+\eea
+
+Due to electronics technical constraints, the area of the integrated cells is 0.00022~{\cmcm}, %$cm^2$, 
+which corresponds a value for the membrane capacitance: C$_{MEM}$ $=$ 1~{\mufcm2}.\\
+
+
+\section{Example of a table} \label{Appdx2}
+
+The Memory map\footnote{provided by Dr. Yanick Bornat, IXL, Universit\'e
+Bordeaux 1, Bordeaux, France} of PAX I was given as the following, through
+which communication between the digital hardware and the software layer
+is maintained~\cite{Zou09}. \\
+
+{\noindent
+\singlespacing
+\begin{tabular}{|p{2cm}|p{2cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|p{.8cm}|}
+\hline \multicolumn{2}{|c|}{Address (bytes)} & \multicolumn{8}{|c|}{Memory (bits)}\\
+\hline  DEC   & HEX & 0000 & 0000 & 0000 & 0000 & 0000 & 0000 & 0000 & 0000 \\
+%\hline DEC &   HEX & \multicolumn{2}{|c|}{+03} & \multicolumn{2}{|c|}{+02} & \multicolumn{2}{|c|}{+01} & \multicolumn{2}{|c|}{+00} \\
+\hline   0 & 0x000 & \multicolumn{8}{|l|}{Identification Number} \\
+\hline   4 & 0x004 & \multicolumn{4}{|l|}{State Registers} & \multicolumn{4}{|l|}{Led Status} \\
+\hline   8 & 0x008 & \multicolumn{8}{|l|}{System Clock Value} \\
+\hline  12 & 0x00C & \multicolumn{8}{|l|}{System Clock cycle duration} \\
+\hline  16 & 0x010 & \multicolumn{8}{|>{\columncolor[rgb]{0.82,0.82,0.82}}l|}{Reserved} \\
+\hline  20 & 0x014 & \multicolumn{8}{|>{\columncolor[rgb]{0.82,0.82,0.82}}l|}{Reserved} \\
+\hline  24 & 0x018 & \multicolumn{8}{|>{\columncolor[rgb]{0.82,0.82,0.82}}l|}{Reserved} \\
+\hline  28 & 0x01C & \multicolumn{8}{|>{\columncolor[rgb]{0.82,0.82,0.82}}l|}{Reserved} \\
+\hline  32 & 0x020 & \multicolumn{3}{|l|}{Vcomp0} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} &
+                     \multicolumn{3}{|l|}{Vstim0} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} \\
+\hline  36 & 0x024 & \multicolumn{3}{|l|}{Vcomp1} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} &
+                     \multicolumn{3}{|l|}{Vstim1} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} \\
+\hline  40 & 0x028 & \multicolumn{3}{|l|}{Vcomp2} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} &
+                     \multicolumn{3}{|l|}{Vstim2} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} \\
+\hline  44 & 0x02C & \multicolumn{3}{|l|}{Vcomp3} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} &
+                     \multicolumn{3}{|l|}{Vstim3} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} \\
+\hline  48 & 0x030 & \multicolumn{3}{|l|}{Vcomp4} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} &
+                     \multicolumn{3}{|l|}{Vstim4} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} \\
+\hline  52 & 0x034 & \multicolumn{3}{|l|}{Vcomp5} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} &
+                     \multicolumn{3}{|l|}{Vstim5} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} \\
+\hline  56 & 0x038 & \multicolumn{3}{|l|}{Vcomp6} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} &
+                     \multicolumn{3}{|l|}{Vstim6} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} \\
+\hline  60 & 0x03C & \multicolumn{3}{|l|}{Vcomp7} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} &
+                     \multicolumn{3}{|l|}{Vstim7} & \multicolumn{1}{|>{\columncolor[rgb]{0.82,0.82,0.82}}r|}{0} \\
+\hline  64 & 0x040 & \multicolumn{2}{|c|}{I/E} & \multicolumn{2}{|c|}{Scmd} & \multicolumn{2}{|c|}{Cmd1} & \multicolumn{2}{|c|}{Cmd0} \\
+\hline  68 & 0x044 & \multicolumn{6}{|>{\columncolor[rgb]{0.82,0.82,0.82}}l|}{Reserved} & \multicolumn{2}{|c|}{Vlcmd} \\
+\hline  72 & 0x048 & \multicolumn{8}{|>{\columncolor[rgb]{0.82,0.82,0.82}}l|}{Reserved} \\
+\hline  76 & 0x04C & \multicolumn{8}{|>{\columncolor[rgb]{0.82,0.82,0.82}}l|}{Reserved} \\
+\hline  80 & 0x050 & \multicolumn{8}{|l|}{Interruption Counter} \\
+\hline  84 & 0x054 & \multicolumn{8}{|>{\columncolor[rgb]{0.82,0.82,0.82}}l|}{Reserved} \\
+\hline  88 & 0x058 & \multicolumn{8}{|>{\columncolor[rgb]{0.82,0.82,0.82}}l|}{Reserved} \\
+\hline  92 & 0x05C & \multicolumn{8}{|>{\columncolor[rgb]{0.82,0.82,0.82}}l|}{Reserved} \\
+\hline
+\end{tabular}}\\
+% some notes of usage:
+% \multicolumn must either begin a row or be placed immediately after an &.
+% \rowcolor[rgb]{0.8,0.8,0.8}; \columncolor[rgb]{0.82,0.82,0.82}
+
+% improvements of seconds generation ASICs (1st layer)
+The analog hardware is in charge of computing in continuous and
+real-time neuronal and synaptic conductances. To increase the number
+of neurons possibly processed by analog neural elements, the second
+generation ASIC was able to model a set of 4 neurons and synaptic
+conductances (per ASIC chip). {\2g} ASIC includes one inhibitory
+neuron and three excitatory ones; each of them receives inhibitory
+and excitatory synaptic inputs. This 1/3 ratios of RS and FS cells is
+close to the ratio encountered in sensory cortex. Including four
+neural elements per chip allows us to build larger network. \\
+
+
+%------------------------------------------------------------------------------------------
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "../thesis"
+%%% End:
