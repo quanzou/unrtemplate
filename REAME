@@ -21,13 +21,16 @@ You should have received a copy of the GNU General Public License
 along with Hermes2D; If not, write to the Free SoftwareFoundation, 
 Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-please send all bugs, questions, comments and suggestions, etc., to 
-the author at quan.zou@gmail.com
+                   Requirement of the program
 
-Requirement of the program:
-Unix command shell, GNU make utility, TeX Live(http://tug.org), 
+Unix command shell, GNU make utility, TeX Live(http://tug.org), Git. 
 
-Usage of the package:
+                      Obtain the program
+
+# git http://github.com/quanzou/unrtemplate.git
+
+                     Usage of the package
+
 1. Edit the executables used by the program at the beginning of the 
 Makefile to point to its corresponding location in your system. 
 
@@ -54,3 +57,6 @@ Finally, change the thesis.tex into corresponding filename:
 # make latexpdf			// compile pdf file
 
 # make latexhelp		// show latex options
+
+please send all bugs, questions, comments and suggestions, etc., to 
+the author at quan.zou@gmail.com
