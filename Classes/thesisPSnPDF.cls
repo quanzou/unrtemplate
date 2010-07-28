@@ -46,6 +46,7 @@
 \usepackage[perpage]{footmisc}
 \usepackage[round, sort, numbers]{natbib}
 \usepackage{ifthen}
+\usepackage{ifpdf}
 \usepackage{colortbl}			% It has a \rowcolor command
 \usepackage{pifont}			% provide circled numbers, part of psnfss package
 
@@ -77,24 +78,9 @@
 
 %------------------------------------------------------------------------------------------
 % Switch between latex and pdflatex
+% replace \ifpdf defination by \usepackage{ifpdf}, the package has better tests. 
+% also comptitable with MacPort under MacOSX. by, Quan Zou 28Jul2010
 %------------------------------------------------------------------------------------------
-% define \ifpdf commond to switch between latex and pdflatex
-% Oct 19, 2009 debugged switching of ifpdf
-\newif \ifpdf
-    \ifx \pdfoutput \undefined
-        % for running latex if unspecified
-        \pdffalse
-    \else
-        % check pdfoutput value
-        \ifnum \pdfoutput <1  % Not generating pdf, but DVI
-            \pdffalse
-        \else
-            % for running pdflatex 
-            \pdfoutput = 1    % positive value for a PDF output
-            \pdftrue
-        \fi
-\fi
-
 % if use pdflatex add some hyperref into the file
 \ifpdf
 %-->

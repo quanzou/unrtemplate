@@ -22,8 +22,12 @@ along with Hermes2D; If not, write to the Free SoftwareFoundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
                    Requirement of the program
+The package is tested under debian lenny, tools needed are: Unix 
+command shell, GNU make utility, TeX Live(http://tug.org), Git. 
 
-Unix command shell, GNU make utility, TeX Live(http://tug.org), Git. 
+The package is also tested with MacPorts-1.9.1 under MacOSX 10.6.x:
+tools git-core, texlive, texlive-latex-extra are needed. 
+
 
                       Obtain the program
 
