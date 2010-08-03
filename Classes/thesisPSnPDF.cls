@@ -428,7 +428,7 @@
     \renewcommand{\footnotesize}{\small}
     \renewcommand{\footnoterule}{\relax}
     \thispagestyle{empty}
-    \thisfancypage{\shadowbox}{}			% works with onesided
+    \fancypage{\shadowbox}{}			% works with onesided
     \doublespacing
 
   % some definations for ifpdf
