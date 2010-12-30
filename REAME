@@ -18,7 +18,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 General Public License for more details.
 
 You should have received a copy of the GNU General Public License 
-along with Hermes2D; If not, write to the Free SoftwareFoundation, 
+along with LaTeX2e; If not, write to the Free SoftwareFoundation, 
 Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
                    Requirement of the program
@@ -31,7 +31,8 @@ tools git-core, texlive, texlive-latex-extra are needed.
 
                       Obtain the program
 
-# git http://github.com/quanzou/unrtemplate.git
+# git clone http://github.com/quanzou/unrtemplate.git
+# git clone http://neurosim.minidns.net/git/unrtemplate.git
 
                      Usage of the package
 
